@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! "$(docker ps -a -q)" ]; then
+if [ ! "$(docker ps -a -q -f node-app)" ]; then
         echo "cleanup"
         docker kill $(docker ps -q)
         docker rm $(docker ps -a -q)
